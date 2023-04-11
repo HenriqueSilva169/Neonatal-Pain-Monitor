@@ -8,7 +8,7 @@ class NPASS {
   NPASS(this.irritabilidadeOuChoro, this.estadoComportamental,
       this.expressaoFacial, this.tonusDosMembros, this.sinaisVitais);
 
-  resultado() {
+  int resultado() {
     int soma = irritabilidadeOuChoro +
         estadoComportamental +
         expressaoFacial +

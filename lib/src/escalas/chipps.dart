@@ -7,7 +7,7 @@ class CHIPPS {
   CHIPPS(this.choro, this.expressaoFacial, this.posturaDoTronco,
       this.posturaDasPernas, this.inquietacaoMotora);
 
-  resultado() {
+  int resultado() {
     int soma = choro +
         expressaoFacial +
         posturaDoTronco +

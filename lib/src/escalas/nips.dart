@@ -9,7 +9,7 @@ class NIPS {
   NIPS(this.expressaoFacial, this.choro, this.respiracao, this.bracos,
       this.pernas, this.estadoDeConsciencia);
 
-  resultado() {
+  int resultado() {
     int soma = expressaoFacial +
         choro +
         respiracao +
