@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neonatal_pain_monitor/telas/intervencoes%20copy.dart';
 import '../../telas/widgets/card_questionario.dart';
 import '../../utils/dados/escalas/opcoes_npass.dart';
 import '../../utils/modelos/dados_bebe.dart';
@@ -30,7 +31,7 @@ class _EscalaNPASSState extends State<EscalaNPASS> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => Intervencoes(
+                    builder: (context) => IntervencoesNanda(
                           dadosBebe: widget.dadosBebe,
                           teste: opcoesNPASS,
                           scoreTeste: scoreTeste(opcoesNPASS),

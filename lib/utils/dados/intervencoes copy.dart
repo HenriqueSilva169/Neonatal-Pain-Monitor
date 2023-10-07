@@ -1,11 +1,10 @@
 import '../../utils/modelos/intervencao.dart';
 
-class DadosIntervencoes {
+class DadosIntervencoesNanda {
   static List<Intervencao> lista = const [
     Intervencao(
         nome: 'Enrolamento (Swadling) - contenção facilitada',
-        descricao:
-            'A contenção gentil dos membros junto ao tronco, com a flexão das extremidades inferiores e alinhamento na linha mediana dos membros superiores flexionados, posicionando a mão perto da boca, é efetiva na promoção de estabilidade fisiológica e comportamental. Quando envolvidos em manta ou ninho e contidos durante procedimentos dolorosos, neonatos pré-termo choram por menos tempo, estabilizam o ciclo sono-vigília e apresentam menos alterações de frequência cardíaca (TAMEZ, 2017; CHRISTOFFEL; et al., 2017).'),
+        descricao: '.'),
     Intervencao(
         nome: 'Massagem local - Toque terapêutico',
         descricao:

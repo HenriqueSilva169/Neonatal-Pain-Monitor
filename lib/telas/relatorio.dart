@@ -61,7 +61,7 @@ class Relatorio extends StatelessWidget {
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Rotulo(texto: 'Intervenções:'),
+                  child: Rotulo(texto: 'Intervenções não farmacológicas recomendadas para prevenção, alívio e manejo da dor:'),
                 ),
                 CardListaIntervencoes(
                   intervencoes: intervencoes,
