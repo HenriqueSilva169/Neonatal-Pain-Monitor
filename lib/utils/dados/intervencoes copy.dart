@@ -3,60 +3,193 @@ import '../../utils/modelos/intervencao.dart';
 class DadosIntervencoesNanda {
   static List<Intervencao> lista = const [
     Intervencao(
-        nome: 'Enrolamento (Swadling) - contenção facilitada',
-        descricao: '.'),
+        nome: 'Conhecimento deficiente da mãe',
+        descricao: ''),
     Intervencao(
-        nome: 'Massagem local - Toque terapêutico',
-        descricao:
-            'A massagem terapêutica é um toque sistemático das mãos humanas que contribui para o ganho de peso, diminui as respostas à dor e diminui a permanência no hospital (CORDEIRO et al., 2019).'),
+        nome: 'Controle emocional lábil da mãe',
+        descricao:'',
+    ),
     Intervencao(
-        nome: 'Toque facilitador (Facilitated Tucking)',
-        descricao:
-            'O toque palmar organiza o bebê, traz conforto e alivia a dor (CIGNACCO; et al., 2017)'),
+        nome: 'Risco de vínculo prejudicado',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Sucção não nutritiva',
-        descricao:
-            'A sucção não nutritiva com chupeta ou dedo enluvado pode diminuir a hiperatividade e modular o desconforto do RN, além de diminuir a intensidade e a duração da dor aguda em neonatos pré-termo e a termo submetidos a procedimentos dolorosos. Seus efeitos estão associados ao aumento na oxigenação, melhora nas funções respiratória e gastrointestinal (durante a oferta de dieta por sonda gástrica), diminuição da frequência cardíaca e do gasto energético, sendo que os benefícios ocorrem durante sucção ritmada, havendo possibilidade de ocorrência de efeito rebote com sua interrupção (MOTTA; CUNHA, 2015; SHEN; et al., 2022).'),
+        nome: 'Vínculo prejudicado evidenciado por recém-nascido prematuro',
+        descricao:'',
+    ),
     Intervencao(
-        nome: 'Banho de imersão',
-        descricao:
-            'Redução da sensibilidade das terminações nervosas, levando à diminuição da dor; ao relaxamento muscular; à redução do estresse pela diminuição da dor; diminuindo os níveis de cortisol; à vasodilatação, promovendo o aumento da circulação periférica; ao aumento da capacidade vital; ao aumento do retorno venoso e à sensação de bem estar por simular o útero materno (GONÇALVES; et al, 2017).'),
+        nome: 'Vínculo prejudicado evidenciado por patologia do recém-nascido',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Amamentação e leite materno',
-        descricao:
-            'O leite humano, além dos reconhecidos benefícios nutricionais e afetivos para o bebê, também pode ser uma intervenção eficaz para alívio de dor, tanto na forma do aleitamento materno, quanto oferecido por sonda nasogástrica. Os efeitos positivos da sucção ao seio materno em relação à redução das respostas à dor em RNs submetidos a procedimentos dolorosos, em especial punção de calcâneo e venosa, têm sido demonstrados (CIRIK; EFE, 2020; FREITAS, 2019).'),
+        nome: 'Risco de processo perinatológico ineficaz ',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Calor local',
-        descricao:
-            'Estratégias de analgesia regularmente utilizadas para o alivio da dor são as aplicações de calor local por um período de 5 a 10 minutos, por meio de uma compressa umedecida com água morna ou aquecedores descartáveis, a fim de se obter a dilatação dos vasos presentes na região (SILVA, 2018).'),
+        nome: 'Processo perinatológico ineficaz ',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Musicoterapia',
-        descricao:
-            'Diminui a ansiedade e aumenta o grau de relaxamento de pacientes graves em qualquer faixa etária, inclusive nos prematuros (BARTOLEME; FREDDI, 2008).'),
+        nome: 'Quadro clínico geral comprometido',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Contato pele a pele - Método canguru',
-        descricao:
-            'O contato pele a pele durante um procedimento doloroso reduz sinais fisiológicos e comportamentais de dor (TAMEZ, 2017). Esta estratégia tem se mostrado eficaz para diminuir a dor do RN durante procedimentos agudos, especialmente após punções capilares. É indicado que o contato pele a pele seja iniciado antes e mantido durante e após o procedimento doloroso, quando possível (BRASIL, 2017).'),
+        nome: 'Dor aguda dor aguda evidenciado por expressão facial',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Diminuição da luminosidade local',
-        descricao:
-            'As luzes são intensas e brilhantes dentro das unidades neonatais podem causar privação de sono, dor, sedação prolongada, afetar o desenvolvimento global e neurossensorial (SOCIEDADE PORTUGUESA DE NEONATOLOGIA, 2018).'),
+        nome: 'Dor aguda dor aguda evidenciado choro persistente',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Diminuição do ruído local',
-        descricao:
-            'A exposição ao ruído gera aumento de pressão arterial, alterações do ritmo cardíaco, vasoconstrição periférica, dilatação das pupilas e aumento das secreções de adrenalina. Estas alterações afetam os estados fisiológico e neurocomportamental do bebê (CORDEIRO, 2015). Ainda gera distúrbios nos padrões de sono, irritabilidade, agitação, choro, fadiga, aumento do consumo de oxigênio e da frequência cardíaca (JORDÃO, 2017).'),
+        nome: 'Distúrbio no padrão de sono - sono e repouso prejudicado',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Conversar com o recém-nascido',
-        descricao:
-            'A voz materna reduz os escores de dor durante a coleta de sangue, mostrando ser um método prático, barato, simples e sem complicações para a pratica diária no alivio da dor em recém-nascidos (PEDO, 2019).'),
+        nome: 'Padrão respiratório ineficaz relacionado a fadiga da musculatura respiratória',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Diminuição da estimulação tátil',
-        descricao:
-            'Intervenção mínima, ou seja, realização dos procedimentos potencialmente dolorosos ou desconfortáveis de maneira conjunta, permitindo períodos de descanso ao paciente (BALDA; GUINSBURG, 2019).'),
+        nome: 'Ventilação espontânea prejudicada',
+        descricao: '',
+    ),
     Intervencao(
-        nome: 'Administração de substâncias adocicadas por via oral',
-        descricao:
-            'A administração de soluções adocicadas diretamente sobre a língua do RN, cerca de 2 minutos antes da realização de procedimentos dolorosos, causa liberação de opioides endógenos, os quais possuem propriedades analgésicas intrínsecas, bloqueando os caminhos da dor. As soluções adocicadas diminuem a duração do choro, atenuam a mímica facial de dor, minimizam a elevação da frequência cardíaca e os escores na aplicação de escalas de avaliação da dor (GOMES; et. al., 2019).'),
+        nome: 'Desobstrução ineficaz das vias aéreas relacionado a dispnéia',
+        descricao: '',
+    ),
+    Intervencao(
+      nome: 'Desobstrução ineficaz das vias aéreas relacionado a secreção retida',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de aspiração',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Troca de gases prejudicada',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Perfusão periférica ruim',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Débito cardíaco diminuído',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de infecção relacionado a procedimentos invasivos',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Integridade da pele prejudicada relacionado a procedimentos invasivos',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Integridade da pele prejudicada relacionado a extemos de idade',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de lesão por pressão',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Integridade da pele prejudicada relacionado a fatores mecânicos (ex: forças abrasivas, pressão)',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de termorregulação ineficaz',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Termorregulação ineficaz relacionada a hipotermia',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Termorregulação ineficaz relacionada a hipertermia',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de desequilíbrio eletrolítico',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Eliminação urinária prejudicada',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de glicemia instável',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Amamentação ineficaz - reflexo de sucção insatisfatório',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Amamentação interrompida',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Leite materno insuficiente',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Padrão ineficaz de alimentação ',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Esvaziamento gástrico retardado',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de constipação relacionado ao uso de fórmulas lácteas',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Constipação',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de diarreia relacionado ao uso de fórmulas lácteas',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Diarreia',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Desconforto abdominal manifestado por choro forte, rubor e sinais de irritabilidade',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de resposta alérgica',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de sangramento',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Risco de queda',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de icterícia neonatal',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Hiperbilirrubinemia neonatal',
+      descricao: '',
+    ),
+    Intervencao(
+      nome: 'Risco de desenvolvimento atrasado',
+      descricao: '',
+    ),
+     Intervencao(
+      nome: 'Comportamento desorganizado ',
+      descricao: '',
+    ),
+  
   ];
 }
 
