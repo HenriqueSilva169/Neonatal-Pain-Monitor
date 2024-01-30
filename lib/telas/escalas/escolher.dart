@@ -41,13 +41,13 @@ class EscolhaEscala extends StatelessWidget {
                       descricao:
                           'Desenvolvida para avaliar sedação em recém-nascido a termo, prematuro e crianças gravemente doentes.',
                       rota: EscalaNPASS(dadosBebe: dadosBebe))),
-              Center(
-                  child: CardTexto(
-                      titulo:
-                          'Escala N-PASS (Dor) – (Neonatal Pain Agitation and Sedation Scale)',
-                      descricao:
-                          'Desenvolvida para avaliar dor aguda e prolongada (crônica e/ou contínua) em recém-nascido a termo, prematuro e crianças gravemente doentes.',
-                      rota: EscalaNPASSDor(dadosBebe: dadosBebe))),
+              // Center(
+              //     child: CardTexto(
+              //         titulo:
+              //             'Escala N-PASS (Dor) – (Neonatal Pain Agitation and Sedation Scale)',
+              //         descricao:
+              //             'Desenvolvida para avaliar dor aguda e prolongada (crônica e/ou contínua) em recém-nascido a termo, prematuro e crianças gravemente doentes.',
+              //         rota: EscalaNPASSDor(dadosBebe: dadosBebe))),
             ],
           ),
         ),

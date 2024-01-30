@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:neonatal_pain_monitor/telas/conta.dart';
+import 'package:neonatal_pain_monitor/telas/login.dart';
 import 'package:neonatal_pain_monitor/utils/modelos/conteudo_relatorio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './telas/formularios/bebe.dart';
 import './telas/relatorios.dart';
 import './utils/dados/sobre.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  String? email = prefs.getString("email");
   runApp(
     MaterialApp(
       theme:
           ThemeData(useMaterial3: true, colorSchemeSeed: Colors.purpleAccent),
       title: 'Neonatal Pain Monitor',
-      home: const SafeArea(
-        child: MainApp(),
+      home: SafeArea(
+        child: (email != null) ? MainApp() : LoginPage(),
       ),
     ),
   );
@@ -37,7 +43,16 @@ class MainApp extends StatelessWidget {
                   builder: (BuildContext context) => AlertDialog(
                       title: const Text('Sobre o app'), content: Text(sobre)));
             },
-          )
+          ),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Conta(),
+                    ));
+              },
+              icon: Icon(Icons.verified_user)),
         ],
       ),
       body: Relatorios(relatorios: relatorios),

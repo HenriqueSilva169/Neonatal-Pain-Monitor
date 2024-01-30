@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neonatal_pain_monitor/telas/metrica_dor.dart';
 import 'package:neonatal_pain_monitor/utils/modelos/dados_bebe.dart';
 import 'package:neonatal_pain_monitor/utils/resultado/avaliar_dor.dart';
 import '../../telas/widgets/card_questionario.dart';
@@ -22,17 +23,17 @@ class _EscalaCHIPPSState extends State<EscalaCHIPPS> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Escala CHIPPS - Sedação')),
+      appBar: AppBar(title: const Text('Escala CHIPPS')),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           if (currentPage == opcoesCHIPPS.length - 1) {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => Intervencoes(
+                    builder: (context) => MetricaDor(
                           dadosBebe: widget.dadosBebe,
                           teste: opcoesCHIPPS,
-                          scoreTeste: scoreTeste(opcoesCHIPPS),
+                          score: scoreTeste(opcoesCHIPPS),
                           avaliacao: avaliarDor(scoreTeste(opcoesCHIPPS)),
                         )));
           } else {

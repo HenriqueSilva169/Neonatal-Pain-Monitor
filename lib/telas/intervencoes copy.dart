@@ -15,13 +15,17 @@ class IntervencoesNanda extends StatefulWidget {
   final int scoreTeste;
   final String avaliacao;
   final List<Question> teste;
+  final int? scoreDois;
+  final String? avaliacaoDois;
 
   const IntervencoesNanda(
       {super.key,
       required this.dadosBebe,
       required this.teste,
       required this.scoreTeste,
-      required this.avaliacao});
+      required this.avaliacao,
+      required this.scoreDois,
+      required this.avaliacaoDois});
 
   static List<Intervencao> dados = DadosIntervencoesNanda.lista;
   @override
@@ -55,28 +59,66 @@ class _IntervencoesNandaState extends State<IntervencoesNanda> {
     22: false,
     23: false,
     24: false,
+    25: false,
+    26: false,
+    27: false,
+    28: false,
+    29: false,
+    30: false,
+    31: false,
+    32: false,
+    33: false,
+    34: false,
+    35: false,
+    36: false,
+    37: false,
+    38: false,
+    39: false,
+    40: false,
+    41: false,
+    42: false,
+    43: false,
+    44: false,
+    45: false,
+    46: false,
+    47: false,
   };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Diagnóstico de Enfermagem da NANDA', style: TextStyle(fontSize: 10),), actions: [
-          TextButton(
-            onPressed: () => {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
+        appBar: AppBar(
+            title: const Text(
+              'Diagnóstico de Enfermagem da NANDA',
+              style: TextStyle(fontSize: 10),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Map<int, bool> nanda = {};
+                  for (int i = 0; i < selecionadas.length; i++) {
+                    if (selecionadas[i] == true) {
+                      nanda[i] = true;
+                    }
+                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
                       builder: (context) => Intervencoes(
-                            dadosBebe: widget.dadosBebe,
-                            teste: widget.teste,
-                            scoreTeste:  widget.scoreTeste,
-                            avaliacao: widget.avaliacao
-                              
-                          )))
-            },
-            child: const Text('Continuar'),
-          )
-        ]),
+                        dadosBebe: widget.dadosBebe,
+                        teste: widget.teste,
+                        scoreTeste: widget.scoreTeste,
+                        avaliacao: widget.avaliacao,
+                        scoreDois: widget.scoreDois,
+                        avaliacaoDois: widget.avaliacaoDois,
+                        nanda: nanda,
+                      ),
+                    ),
+                  );
+                },
+                child: const Text('Continuar'),
+              )
+            ]),
         body: SingleChildScrollView(
           child: Column(children: [
             ...IntervencoesNanda.dados.map((intervencao) => Column(
@@ -84,7 +126,8 @@ class _IntervencoesNandaState extends State<IntervencoesNanda> {
                     IntervencoesCheckboxNanda(
                         intervencao: intervencao,
                         onChanged: (bool? value) => {
-                              setState(() => selecionadas[IntervencoesNanda.dados
+                              setState(() => selecionadas[IntervencoesNanda
+                                  .dados
                                   .indexOf(intervencao)] = value!)
                             },
                         selecionadas: selecionadas),

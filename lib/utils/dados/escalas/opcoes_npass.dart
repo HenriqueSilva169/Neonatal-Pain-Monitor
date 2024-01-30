@@ -14,7 +14,7 @@ List<Question> opcoesNPASS = [
     options: [
       'Ausência de sinais de sedação',
       'Acorda breve com estímulo, raro movimento espontâneo',
-      'Não desperta ou não reage com estímulo, sem movimentos espontâneos'
+      'Não desperta ou não reage com estímulo, sem movimentos espontâneos',
     ],
   ),
   Question(
@@ -22,7 +22,12 @@ List<Question> opcoesNPASS = [
     options: [
       'Ausência de sinais de sedação',
       'Mínima expressão facial com estímulo',
-      'Boca relaxada, babando ou ausência de expressão facial'
+      'Boca relaxada, babando ou ausência de expressão facial',
+    ],
+    image: [
+      '',
+      'assets/images/n_pass_estimulo.png',
+      'assets/images/n_pass_relaxada.png',
     ],
   ),
   Question(
@@ -34,11 +39,11 @@ List<Question> opcoesNPASS = [
     ],
   ),
   Question(
-    questionText: 'Sinais Vitais',
+    questionText: 'Sinais Vitais: FC, PA, FR e Saturação O2',
     options: [
       'Ausência de sinais de sedação',
       'Alteração menor que 10% com estímulo',
-      'Sem alteração após estímulo, hipoventilação ou apneias'
+      'Sem alteração após estímulo, hipoventilação ou apneias',
     ],
   ),
 ];

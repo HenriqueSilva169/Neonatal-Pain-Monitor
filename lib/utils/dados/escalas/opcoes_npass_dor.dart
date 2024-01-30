@@ -24,6 +24,11 @@ List<Question> opcoesDorNPASS = [
       'Qualquer expressão de dor intermitente',
       'Qualquer expressão de dor contínua'
     ],
+    image: [
+      "",
+      'assets/images/n_pass_intermitente.png',
+      'assets/images/n_pass_continua.png',
+    ],
   ),
   Question(
     questionText: 'Tonus Membros',

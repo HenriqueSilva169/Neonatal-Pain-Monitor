@@ -4,6 +4,10 @@ List<Question> opcoesNIPS = [
   Question(
     questionText: 'Expressão Facial',
     options: ['Relaxada', 'Contraída'],
+    image: [
+      "assets/images/nips_relaxada.png",
+      "assets/images/nips_contraida.png",
+    ],
   ),
   Question(
     questionText: 'Choro',
@@ -22,7 +26,7 @@ List<Question> opcoesNIPS = [
     options: ['Relaxadas', 'Fletidas ou Estendidas'],
   ),
   Question(
-    questionText: 'Estado de Consciência',
+    questionText: 'Estado de Consciência/alerta',
     options: [
       'Dormindo e/ou Calmo',
       'Agitado e/ou Irritado e/ou Desconfortável'

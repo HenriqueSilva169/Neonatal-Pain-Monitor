@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:neonatal_pain_monitor/telas/intervencoes%20copy.dart';
+import 'package:neonatal_pain_monitor/telas/metrica_dor%20copy.dart';
+import 'package:neonatal_pain_monitor/telas/metrica_dor.dart';
+import 'package:neonatal_pain_monitor/utils/modelos/pergunta.dart';
 import 'package:neonatal_pain_monitor/utils/resultado/avaliar_sedacao.dart';
 import 'package:neonatal_pain_monitor/utils/resultado/calculo.dart';
 import '../../utils/dados/escalas/opcoes_npass_dor.dart';
@@ -9,8 +12,17 @@ import '../intervencoes.dart';
 
 class EscalaNPASSDor extends StatefulWidget {
   final DadosBebe dadosBebe;
+  final int score;
+  final String avaliacao;
+  final List<Question> teste;
 
-  const EscalaNPASSDor({super.key, required this.dadosBebe});
+  EscalaNPASSDor({
+    super.key,
+    required this.dadosBebe,
+    required this.score,
+    required this.avaliacao,
+    required this.teste,
+  });
 
   @override
   State<EscalaNPASSDor> createState() => _EscalaNPASSDorState();
@@ -23,17 +35,19 @@ class _EscalaNPASSDorState extends State<EscalaNPASSDor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Escala NPASS - Dor')),
+        appBar: AppBar(title: const Text('Escala NPASS - Dor/Agitação')),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             if (currentPage == opcoesDorNPASS.length - 1) {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => IntervencoesNanda(
+                      builder: (context) => MetricaDorDoisValores(
                             dadosBebe: widget.dadosBebe,
                             teste: opcoesDorNPASS,
-                            scoreTeste: scoreTeste(opcoesDorNPASS),
+                            score: scoreTeste(opcoesDorNPASS),
+                            scoreDois: widget.score,
+                            avaliacaoDois: widget.avaliacao,
                             avaliacao:
                                 avaliarSedacao(scoreTeste(opcoesDorNPASS)),
                           )));

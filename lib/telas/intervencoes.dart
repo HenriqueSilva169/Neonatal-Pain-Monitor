@@ -11,13 +11,20 @@ class Intervencoes extends StatefulWidget {
   final int scoreTeste;
   final String avaliacao;
   final List<Question> teste;
+  final Map<int, bool> nanda;
+  final int? scoreDois;
+  final String? avaliacaoDois;
 
-  const Intervencoes(
-      {super.key,
-      required this.dadosBebe,
-      required this.teste,
-      required this.scoreTeste,
-      required this.avaliacao});
+  const Intervencoes({
+    super.key,
+    required this.dadosBebe,
+    required this.teste,
+    required this.scoreTeste,
+    required this.avaliacao,
+    required this.nanda,
+    required this.scoreDois,
+    required this.avaliacaoDois,
+  });
 
   static List<Intervencao> dados = DadosIntervencoes.lista;
 
@@ -51,13 +58,19 @@ class _IntervencoesState extends State<Intervencoes> {
           TextButton(
             onPressed: () => {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Relatorio(
-                          dadosBebe: widget.dadosBebe,
-                          scoreTeste: widget.scoreTeste,
-                          avaliacao: widget.avaliacao,
-                          intervencoes: selecionadas)))
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Relatorio(
+                    dadosBebe: widget.dadosBebe,
+                    scoreTeste: widget.scoreTeste,
+                    avaliacao: widget.avaliacao,
+                    scoreDois: widget.scoreDois,
+                    avaliacaoDois: widget.avaliacaoDois,
+                    intervencoes: selecionadas,
+                    nanda: widget.nanda,
+                  ),
+                ),
+              ),
             },
             child: const Text('Continuar'),
           )

@@ -45,6 +45,9 @@ class CardQuestionario extends StatelessWidget {
                       ),
                       Column(
                         children: question.options.map((option) {
+                          int indexOption = question.options
+                              .indexWhere((element) => element == option);
+
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -58,10 +61,49 @@ class CardQuestionario extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: RadioListTile(
-                                  title: Text(
-                                    option,
-                                    style: const TextStyle(fontSize: 16.0),
-                                  ),
+                                  title: option.length <= 32
+                                      ? Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Text(
+                                              option,
+                                              style: const TextStyle(
+                                                  fontSize: 16.0),
+                                            ),
+                                            question.image != null &&
+                                                    question.image![
+                                                            indexOption] !=
+                                                        ''
+                                                ? Image.asset(
+                                                    question
+                                                        .image![indexOption],
+                                                    width: 100,
+                                                  )
+                                                : Container()
+                                          ],
+                                        )
+                                      : Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Text(
+                                              option,
+                                              style: const TextStyle(
+                                                  fontSize: 16.0),
+                                            ),
+                                            question.image != null &&
+                                                    question.image![
+                                                            indexOption] !=
+                                                        ''
+                                                ? Image.asset(
+                                                    question
+                                                        .image![indexOption],
+                                                    width: 100,
+                                                  )
+                                                : Container()
+                                          ],
+                                        ),
                                   value: option,
                                   groupValue: question.selectedOption,
                                   onChanged: (value) {

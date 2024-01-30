@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:neonatal_pain_monitor/telas/escalas/npass_dor.dart';
 import 'package:neonatal_pain_monitor/telas/intervencoes%20copy.dart';
+import 'package:neonatal_pain_monitor/telas/metrica_dor.dart';
 import '../../telas/widgets/card_questionario.dart';
 import '../../utils/dados/escalas/opcoes_npass.dart';
 import '../../utils/modelos/dados_bebe.dart';
@@ -31,11 +33,12 @@ class _EscalaNPASSState extends State<EscalaNPASS> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => IntervencoesNanda(
+                    builder: (context) => EscalaNPASSDor(
                           dadosBebe: widget.dadosBebe,
                           teste: opcoesNPASS,
-                          scoreTeste: scoreTeste(opcoesNPASS),
-                          avaliacao: avaliarSedacao(scoreTeste(opcoesNPASS)),
+                          score: scoreTestNPasse(opcoesNPASS),
+                          avaliacao:
+                              avaliarSedacaoNPass(scoreTestNPasse(opcoesNPASS)),
                         )));
           } else {
             pageController.nextPage(

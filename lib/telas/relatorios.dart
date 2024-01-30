@@ -24,13 +24,17 @@ class Relatorios extends StatelessWidget {
             avaliacao: relatorio.avaliacao,
             onTap: () => {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Relatorio(
-                          dadosBebe: relatorio.dadosBebe,
-                          avaliacao: relatorio.avaliacao,
-                          intervencoes: relatorio.intervencoes,
-                          scoreTeste: relatorio.scoreTeste)))
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Relatorio(
+                    dadosBebe: relatorio.dadosBebe,
+                    avaliacao: relatorio.avaliacao,
+                    intervencoes: relatorio.intervencoes,
+                    scoreTeste: relatorio.scoreTeste,
+                    nanda: relatorio.intervencoesNanda,
+                  ),
+                ),
+              ),
             },
           );
         },

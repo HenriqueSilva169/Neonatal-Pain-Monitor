@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neonatal_pain_monitor/telas/intervencoes%20copy.dart';
+import 'package:neonatal_pain_monitor/telas/metrica_dor.dart';
 import 'package:neonatal_pain_monitor/utils/modelos/dados_bebe.dart';
 import 'package:neonatal_pain_monitor/utils/resultado/avaliar_dor.dart';
 import '../../utils/dados/escalas/opcoes_nips.dart';
@@ -30,10 +31,10 @@ class _EscalaNIPSState extends State<EscalaNIPS> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => IntervencoesNanda(
+                      builder: (context) => MetricaDor(
                             dadosBebe: widget.dadosBebe,
                             teste: opcoesNIPS,
-                            scoreTeste: scoreTeste(opcoesNIPS),
+                            score: scoreTeste(opcoesNIPS),
                             avaliacao: avaliarDor(scoreTeste(opcoesNIPS)),
                           )));
             } else {
